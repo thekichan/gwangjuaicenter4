@@ -1,0 +1,11 @@
+li= [2, 7, 3, 5, 1]
+def isDuplicate(x):
+    for l in range(0, len(x)-1):
+        for i in range(l+1, len(x)):
+            if x[l] == x[i]:
+                return True
+    return False
+    
+check = isDuplicate(li)
+
+print(check)

@@ -1,0 +1,19 @@
+## print("===GameStart==")
+randomList = createRandomNumber(3)
+print(randomList)
+
+
+while True :
+    
+    inputList = []
+    for i in range(len(randomList)):
+        num = int(input(f'{i+1}번째 숫자입력: '))
+        inputList.append(num)
+    print(inputList)
+
+    strike, ball = strikeBallCounting(randomList, inputList)
+    print(f"strike : {strike} \tball : {ball}")
+    
+    if strike == len(randomList) :
+        print("게임종료!")
+        break

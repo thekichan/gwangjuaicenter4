@@ -1,0 +1,14 @@
+def strikeBallCounting(li1, li2):
+    strike = 0
+    ball = 0
+    
+    for k in range(len(li1)):    
+        for i in range(len(li2)) :
+            if li1[k] == li2[i] :
+                if k == i :
+                    strike += 1
+                else :
+                    ball += 1
+    return strike, ball
+
+strikeBallCounting([1,2,3],[5,2,3])

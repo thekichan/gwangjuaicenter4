@@ -1,0 +1,17 @@
+import random
+
+def createRandomNumber(cnt):
+    randomList = [0,0,0]
+    while isDuplicate(randomList):
+        randomList = []
+        for i in range(cnt):
+            num = random.randint(1,5)
+            randomList.append(num)
+    return randomList
+    
+
+    
+    
+    
+createRandomNumber(5)
+       
