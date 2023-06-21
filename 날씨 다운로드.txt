@@ -1,0 +1,73 @@
+#include <ArduinoJson.h>
+
+
+#include <WiFi.h>
+#include <HTTPClient.h>
+
+const char* ssid = "8679";          // WIFI ID
+const char* password = "qwer1234";  // WIFI PW
+
+// Server 요청 주소
+String address = "http://api.openweathermap.org/data/2.5/weather?q=Gwangju&appid=08ada9dffe329af84bbc138386668c74&units=metric";
+
+String result = "";  // 응답 결과 저장
+HTTPClient http;     // 통신 객체
+
+void setup() {
+  Serial.begin(115200);  // Baud rate
+
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Connecting to WiFi..");
+  }
+
+  Serial.println("Connected to the WiFi network");
+}
+
+void loop() {
+  if ((WiFi.status() == WL_CONNECTED)) {  //Check the current connection status
+
+    http.begin(address);
+
+    int httpCode = http.GET();  // 응답코드
+    if (httpCode > 0) {
+
+      // Serial.println(httpCode);   // 응답코드 출력
+      result = http.getString();  // 응답 결과 저장
+          // 응답 결과 출력
+
+      DynamicJsonBuffer jsonBuffer;
+      JsonObject& root = jsonBuffer.parseObject(result);
+      JsonObject& main = root["main"];
+      JsonObject& wind = root["wind"];
+      JsonArray& weather = root["weather"];
+
+      float temp = main["temp"];
+      Serial.print("temp : ");
+      Serial.println(temp);
+
+      int humidity = main["humidity"];
+      Serial.print("humidity : ");
+      Serial.println(humidity);
+      float speed = wind["speed"];
+      Serial.print("speed : ");
+      Serial.println(speed);
+      
+      JsonObject& weather_one = weather[0];
+      String weather_main = weather_one["main"];
+      Serial.print("weather : ");
+      Serial.println(weather_main);
+      
+    
+    
+    
+    }
+    
+
+    http.end();  //Free the resources
+  } else {
+    Serial.println("Error on HTTP request");
+  }
+  delay(500);
+}

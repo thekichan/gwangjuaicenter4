@@ -1,0 +1,3 @@
+08ada9dffe329af84bbc138386668c74
+
+https://api.openweathermap.org/data/2.5/weather?q=Gwangju&appid=08ada9dffe329af84bbc138386668c74
