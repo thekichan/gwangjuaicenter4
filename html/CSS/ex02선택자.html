@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 선택자의 종류 */
+
+        /* 1. 전체선택자 - (가중치 : 0 / 기호 : *) */
+        *{
+            color : lightseagreen;
+        }
+
+        /* 2. 태그선택자 태그이름 - (가중치 : 1 / 기호없이 태그이름)*/
+        li{
+            color: blue;
+        }
+
+        /* 선택자들을 구분해서 지정을 해주고 싶어!
+         => 클래스 / 아이디
+         
+         클래스 : 중복 가능, 재사용성 뛰어남
+         아이디 :  중복 불가능, 한 문서당 1번만 그 아이디를 사용 가능
+         */
+          
+         /* 3. 클래스 선택자 => (가중치 : 10 / 기호 :.클래스이름) */
+         .dinner{
+            color : brown;
+         }
+
+
+         /* 4. 아이디 선택자 => (가중치 : 100 / 기호 : #아이디이름) */
+         #pic{
+            background-color: yellow;
+         }
+         /* 만약, 가중치가 모두 같다면 아래에서 작성될 수록 가중치가 세다. */
+    </style>
+
+
+
+</head>
+<body>
+    <h1>CSS</h1>
+    <p>웹페이지를 꾸며주는 스타일 시트 언어</p>
+    <ul>
+        <li>CSS 기본구조</li>
+        <li>CSS 선택자</li>
+        <li>CSS 스타일</li>
+    </ul>
+    
+    <h1 class = "dinner">오늘 뭐먹지?</h1>
+    <ul class = "dinner">
+        <li class = "dinner">연어</li>
+        <li class = "dinner">참치</li>
+        <li class = "dinner" id ="pic">샐러드</li>
+    </ul>
+</body>
+</html>
