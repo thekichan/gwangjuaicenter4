@@ -1,0 +1,12 @@
+{
+    "workbench.iconTheme": "eq-material-theme-icons-light",
+    "workbench.colorTheme": "Material Theme Darker",
+    "editor.fontSize": 20,
+    "window.zoomLevel": 1,
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "json.schemas": [
+        "editor.tokenColorCustomizations": {
+            "comments": "#d39e9e"  
+        },
+    ]
+}
