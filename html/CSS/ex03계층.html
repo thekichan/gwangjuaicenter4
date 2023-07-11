@@ -8,13 +8,29 @@
         /* 계층 선택자 이해하기 */
         /* (1) 자손 선택자 - 기호 : 띄어쓰기 */
         /* (1-1) div를 기준으로 자손인 span의 색 tomato */
+        div span {
+            color : tomato;
+        }
         /* (1-2) div를 기준으로 자손인 li 의 색 blue */
+        div li {
+            color : blue;
+        }
         /* (2) 자식 선택자 - 기호 : >  */
         /* ol을 기준으로 자식인 span의 색 hotpink */
+        ol > span {
+            color :  hotpink;
+        }
         /* (3) 근접후행선택자 - 기호 : + */
         /* li를 기준으로 근접해서 붙어있는 li의 색 green */
+        li + li{
+            color : green;
+        }
         /* (4) 후행선택자 - 기호 : ~ */
         /* 첫번째 li를 기준으로 형제관계인 li의 색 lime */
+        li ~ li {
+            color : lime;
+        }
+        
     </style>
 
 
@@ -23,8 +39,7 @@
     <div>
     <strong>좋은 하루 되세요</strong>
     <ol>
-        <li>날씨가 덥네요</li><br>
-        <li>건강관리 잘하세요</li><br>
+        <li>날씨가 덥네요</li>
         <span>우산도 준비하세요</span>
         <li>내일봐요</li>
     </ol>

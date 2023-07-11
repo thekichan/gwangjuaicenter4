@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div>div{
+            width: 100px;
+            height: 100px;
+        }
+
+
+        /* position : 자유자재로 위치를 배치하는  속성 */
+        
+        #static{
+            background-color: lightcoral;
+            /* static : 정적인
+            - position의 default값 
+            - 위치 속성이 비활성화 */
+
+            top : 50px;
+        }
+        #relative{
+            background-color: lightblue;
+            /* (2) relative : 상대적인
+            - 위치 속성이 활성화
+            - 움직이는 기준 :  원래 있던 위치
+            - 기준점을 정확히 알고 싶으면 0,0으로 이동 */
+            position:  relative;
+            top: 50px;
+            left : 30px;
+            
+        }
+        #parents{
+            position: relative;
+        }
+        #absolute{
+            /* (3) absolute : 절대적인 
+            - 위치 속성 활성화
+            - 기준 : position 속성이 static이 아닌 부모
+                부모요소가 없거나, 부모가 static이라면 계속 타고 올라감
+                body태그까지 쭉~ 타고 올라감 */
+            background-color: lightgoldenrodyellow;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+
+        }
+        #fixed{
+            background-color: lightgreen;
+            /* (4) fixed : 고정적인
+            - 위치 속성 활성화
+            - 기준 : body태그 */
+            position: fixed;
+            bottom : 0px;
+            right : 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top"></div>
+    body태그 안
+    <div id="parents">
+        부모 요소 안
+        <div id="static"></div>
+        <div id="relative"></div>
+        <div id="absolute"></div>
+        <div id="fixed">
+            <a href="#static">TOP!</a>
+        </div>
+
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+</body>
+</html>

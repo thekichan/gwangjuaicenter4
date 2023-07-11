@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .answer{
+            display: none;
+        }
+        /* 1. class가 question인 : .question
+           2. 요소 위에 마우스를 올리면 : .hover
+           3. 바로 옆에 있는 (근접후행) : +
+           4. class 가 answer인 애를 : .answer
+           */
+        .question:hover+.answer{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <p class="question">Q. MBTI가 어떻게 되시나요? </p>
+    <p class="answer">A. ISFJ </p>
+</body>
+</html>

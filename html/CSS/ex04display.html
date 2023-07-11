@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* display thrtjd
+        (1) display : block
+        - div, p 등 => 기본 값 block
+        - 무조건 가로로 한줄의 영역을 전부 차지
+        - width, height값 설정 가능
+
+        (2) display : inline
+        - span, a.. 등 => 기본 값 inline
+        - 내가 담은 컨텐츠까지만 크기로 삼는 속성
+        - width, height 값 설정 불가능
+
+        (3) display :  inline-block
+         - inline 속성 + block 속성
+
+         ** 알고 있으면 너무 좋은 정보!
+          display : flex
+          => flexbox
+
+          (4) display : none
+          - 안보이게 하기
+        */
+        p{
+            background-color: lightcoral;
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+
+        span{
+            background-color: lightskyblue;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            
+        }
+    </style>
+</head>
+<body>
+    <p>비가 내리네</p>
+    <p>비가 내리네</p>
+    <p>비가 내리네</p>
+
+    <span>강의실이 에어콘도 나오고 좋죠</span>
+    <span>강의실이 에어콘도 나오고 좋죠</span>
+    <span>강의실이 에어콘도 나오고 좋죠</span>
+
+</body>
+</html>

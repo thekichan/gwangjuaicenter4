@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            /*body태그의 기본 margin값 8px
+            => default 값
+            */
+            margin: 0px;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+        }
+
+        #box1{
+            background-color: red;
+
+            /*margin :  경계선(border)을 기준으로 바깥여백
+            - margin :  00px => 4방향으로 모두 여백이 생겨남
+            - margin-방향 : 00px; => 해당 방향으로만 여백이 생겨남
+            - 요소와 요소 사이에 여백을 두고 싶을 때
+            */
+            
+            margin-left: 0px;
+            /* padding : 경계선<border)를 기준으로 안쪽 여백
+            - padding :  00px => 4방샹으로 모두 여백이 생겨남
+            - padding-방향 : 00px; => 해당 방향으로만 여백이 생겨남
+            - 요소 안쪽으로 컨텐츠 사이에 여백을 두고 싶을 때
+            */
+            padding-right: 0px;
+        }
+        #box2{
+            background-color: blue;
+            
+            /*margin-left: 100px;*/
+            padding-left: 100px;
+        }
+        #box3{
+            background-color: green;
+           /* margin-left: 200px;*/
+           padding-left: 200px;
+        }
+        #box4{
+            background-color: grey;
+            /*margin-left: 300px;*/
+            padding-left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">배고프다</div>
+    <div id="box2">여러분</div>
+    <div id="box3">점심</div>
+    <div id="box4">뭐드셨나요?</div>
+
+    <!-- 
+        div#*4 => 아이디가 있는 div태그를 4개 만들어달라~
+        div.abc*4 => 클래스가 abc가 div태그를 4개 만들어달라~
+    -->
+</body>
+</html>
