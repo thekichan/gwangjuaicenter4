@@ -1,0 +1,24 @@
+int melody[] = {262, 294, 330, 349, 392, 440, 494, 523};
+int song[] = {1, 3, 5};
+int length = sizeof(song) / sizeof(int);
+void setup() {
+  
+}
+
+void loop() {
+
+  for(int i = 0; i < length; i++) {
+    tone(8, melody[song[i]],100);
+delay(200);
+
+
+  }
+tone(8, melody[song[0]],100);
+delay(200);
+
+tone(8, melody[song[1]],100);
+delay(200);
+
+tone(8, melody[song[2]],100);
+delay(200);
+}

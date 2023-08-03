@@ -1,0 +1,38 @@
+- XML(데이터 구조)
+
+<customers>
+<customer>
+    <name>홍길동</name>
+    <tel>010-1111-1111</tel>
+    <addr>광주</addr>
+      <indate>2022.02.10</indate>
+
+</customer>
+<customer>
+
+    <name>홍길동</name>
+    <tel>010-1111-1111</tel>
+    <addr>광주</addr>
+      <indate>2022.02.10</indate>
+
+
+</customer>
+</customers>
+
+
+
+ - JSO(Object)N : Dict - 센서데이터 들어옴 => NoSQL DB
+
+{ "name": "홍길동",
+  "tel": "010-1111-1111",
+  "addr": "광주",
+  "indate": "2022.02.10" }
+
+- Table 구조 (RDBMS)
+ 
+
+
+
+
+
+

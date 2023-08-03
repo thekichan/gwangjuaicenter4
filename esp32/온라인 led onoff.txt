@@ -1,0 +1,62 @@
+#include <ArduinoJson.h>
+#include <ArduinoJson.hpp>
+#include <ArduinoJson.h>
+
+
+#include <WiFi.h>
+#include <HTTPClient.h>
+
+const char* ssid = "8679"; // WIFI ID
+const char* password = "qwer1234"; // WIFI PW
+
+// Server 요청 주소
+String address = "http://nayeho.ngrok.io/state";
+
+String result = ""; // 응답 결과 저장
+HTTPClient http; // 통신 객체
+int ledPin = 18;
+
+void setup() {
+  Serial.begin(115200); // Baud rate
+  pinMode(ledPin, OUTPUT);
+
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(1000);
+    Serial.println("Connecting to WiFi..");
+  }
+
+  Serial.println("Connected to the WiFi network");
+}
+
+void loop() {
+  if ((WiFi.status() == WL_CONNECTED)) { //Check the current connection status
+
+    http.begin(address);
+
+    int httpCode = http.GET(); // 응답코드
+    if (httpCode > 0) {
+
+      //Serial.println(httpCode); // 응답코드 출력
+      result = http.getString(); // 응답 결과 저장
+      Serial.println(result); // 응답 결과 출력
+      
+      DynamicJsonBuffer jsonBuffer;
+      JsonObject& root = jsonBuffer.parseObject(result);
+      String led = root["led"];
+
+      if(led == "1"){
+        digitalWrite(ledPin, 1);
+      }else{
+        digitalWrite(ledPin, 0);
+      }
+
+    }
+
+
+    http.end(); //Free the resources
+  } else {
+    Serial.println("Error on HTTP request");
+  }
+  delay(500);
+}

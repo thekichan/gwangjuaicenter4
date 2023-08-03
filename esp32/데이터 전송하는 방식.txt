@@ -1,0 +1,28 @@
+데이터 전송하는 방식
+저와 한별씨가 데이터를 전송하고자 한다
+nayeho,21,010-
+
+1. CSV(comma seperated value)
+ - 장점 : 전송 비용이 싸다 
+ - 단점 : 데이터만 보고 의미를 유추할 수 없음
+한별씨는 약속 
+, 를 기준으로 첫 번째 데이터 : 이름
+두 번째 데이터 : 나이
+세 번째 데이터 : 전화번호
+
+2. XML(Extensible Markup Language)
+<name>nayeho</name><age>21</age><tel>010-</tel>
+
+ - 장점 : 데이터만 보고 의미 유추 가능
+ - 단점 : 전송 비용이 비싸다
+
+3. Json(JavaScript Object Notation)
+{"name":nayeho, "age":21, "tel":"010-"}
+ -장점 : 많은 곳에서 사용되고 있음!!
+
+ -> Python : Dictionary
+   Flask server 
+
+//학점 계산기
+//
+

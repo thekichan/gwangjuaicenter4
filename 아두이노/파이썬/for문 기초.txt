@@ -1,0 +1,12 @@
+for(int 9 = 3; i <= 11; i++){
+	if(i % 2 = 1){
+	print(i)
+	}
+}
+
+//3이상 11이하인 홀수를 출력!!
+print(3)
+print(5)
+print(7)
+print(9)
+print(11)
