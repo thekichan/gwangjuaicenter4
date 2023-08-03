@@ -1,0 +1,1 @@
+SELECT * FROM haksa.student_course;
