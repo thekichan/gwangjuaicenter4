@@ -1,0 +1,15 @@
+// 치환 :  두 값을 바꾼다!!
+		// JAVA에서 새로운 변수 (저장공간)이 필요
+		int num1 = 10;
+		int num2 = 5;
+		
+		System.out.println(num1);
+		System.out.println(num2);
+		
+	
+		int temp = num1;
+		num1 = num2;
+		num2 = temp;
+		
+		System.out.println(num1);
+		System.out.println(num2);
